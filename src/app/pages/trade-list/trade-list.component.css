@@ -1,0 +1,59 @@
+.trade-list-container {
+  background: #020617;
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #1e293b;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #334155;
+}
+
+th {
+  background: #0f172a;
+}
+
+.profit {
+  color: #22c55e;
+}
+
+.loss {
+  color: #f87171;
+}
+
+.delete {
+  background: #ef4444;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.back {
+  margin-top: 20px;
+}
+
+a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.edit {
+  background: #38bdf8;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+  margin-right: 5px;
+}

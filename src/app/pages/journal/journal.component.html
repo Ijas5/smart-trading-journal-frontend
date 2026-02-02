@@ -1,0 +1,33 @@
+<div class="journal-container">
+  <h2>Trading Journal</h2>
+
+  <div class="form">
+    <input type="date" [(ngModel)]="journal.entry_date" />
+
+    <input type="text" placeholder="Emotion Before Trade" [(ngModel)]="journal.emotion_before" />
+
+    <input type="text" placeholder="Emotion After Trade" [(ngModel)]="journal.emotion_after" />
+
+    <textarea placeholder="Lesson Learned" [(ngModel)]="journal.lesson_learned"></textarea>
+
+    <button (click)="saveEntry()">Save Entry</button>
+
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+    <p class="success" *ngIf="successMessage">{{ successMessage }}</p>
+  </div>
+
+  <h3>Past Entries</h3>
+
+  <div class="entry-list">
+    <div class="entry-card" *ngFor="let e of entries">
+      <p><strong>Date:</strong> {{ e.entry_date | date }}</p>
+      <p><strong>Before:</strong> {{ e.emotion_before }}</p>
+      <p><strong>After:</strong> {{ e.emotion_after }}</p>
+      <p><strong>Lesson:</strong> {{ e.lesson_learned }}</p>
+    </div>
+  </div>
+
+  <div class="back">
+    <a routerLink="/dashboard">⬅ Back to Dashboard</a>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="add-trade-container">
+  <h2>Add New Trade</h2>
+
+  <div class="form">
+    <input type="date" [(ngModel)]="trade.trade_date" />
+
+    <input type="text" placeholder="Pair (e.g. EURUSD)" [(ngModel)]="trade.pair" />
+
+    <select [(ngModel)]="trade.trade_type">
+      <option>Buy</option>
+      <option>Sell</option>
+    </select>
+    
+    <input type="number" placeholder="Entry Price"
+  [(ngModel)]="trade.entry_price"
+  (input)="evaluateTrade()" />
+    <input type="number" placeholder="Exit Price" [(ngModel)]="trade.exit_price" />
+    <input type="number" placeholder="Stop Loss"
+  [(ngModel)]="trade.stop_loss"
+  (input)="evaluateTrade()" />
+
+<input type="number" placeholder="Take Profit"
+  [(ngModel)]="trade.take_profit"
+  (input)="evaluateTrade()" />
+
+<input type="number" placeholder="Lot Size"
+  [(ngModel)]="trade.lot_size"
+  (input)="evaluateTrade()" />
+
+    <textarea placeholder="Notes" [(ngModel)]="trade.notes"></textarea>
+
+<div class="advisor" *ngIf="advisorMessage"
+     [ngClass]="advisorType">
+  {{ advisorMessage }}
+</div>
+
+
+
+    <button (click)="saveTrade()">
+         {{ isEditMode ? 'Update Trade' : 'Save Trade' }}
+    </button>
+
+
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+  </div>
+</div>

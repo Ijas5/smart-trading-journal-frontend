@@ -1,0 +1,44 @@
+<div class="trade-list-container">
+  <h2>Trade History</h2>
+
+  <p *ngIf="loading">Loading...</p>
+
+  <table *ngIf="!loading && trades.length > 0">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Pair</th>
+        <th>Type</th>
+        <th>Entry</th>
+        <th>Exit</th>
+        <th>Lot</th>
+        <th>P/L</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of trades">
+        <td>{{ t.trade_date | date }}</td>
+        <td>{{ t.pair }}</td>
+        <td>{{ t.trade_type }}</td>
+        <td>{{ t.entry_price }}</td>
+        <td>{{ t.exit_price }}</td>
+        <td>{{ t.lot_size }}</td>
+        <td [ngClass]="{'profit': t.profit_loss > 0, 'loss': t.profit_loss < 0}">
+          {{ t.profit_loss }}
+        </td>
+        <td>
+        <button class="edit" (click)="editTrade(t)">Edit</button>
+        <button class="delete" (click)="deleteTrade(t.id)">Delete</button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="!loading && trades.length === 0">No trades found.</p>
+
+  <div class="back">
+    <a routerLink="/dashboard">⬅ Back to Dashboard</a>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="summary-container">
+  <h2>Weekly Summary</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h4>Total Trades</h4>
+      <p>{{ summary.total_trades || 0 }}</p>
+    </div>
+
+    <div class="card green">
+      <h4>Wins</h4>
+      <p>{{ summary.wins || 0 }}</p>
+    </div>
+
+    <div class="card red">
+      <h4>Losses</h4>
+      <p>{{ summary.losses || 0 }}</p>
+    </div>
+
+    <div class="card blue">
+      <h4>Net Profit</h4>
+      <p>{{ summary.net_profit || 0 }}</p>
+    </div>
+
+    <div class="card purple">
+      <h4>Win Rate</h4>
+      <p>{{ getWinRate() }}%</p>
+    </div>
+  </div>
+
+  <div class="back">
+    <a routerLink="/dashboard">⬅ Back to Dashboard</a>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+.add-trade-container {
+  background: #020617;
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+}
+
+.form {
+  max-width: 400px;
+  margin: auto;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: none;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #22c55e;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #16a34a;
+}
+
+.error {
+  color: #f87171;
+  text-align: center;
+}
+.advisor {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.advisor.good {
+  background: #052e16;
+  color: #22c55e;
+}
+
+.advisor.warn {
+  background: #422006;
+  color: #facc15;
+}
+
+.advisor.bad {
+  background: #450a0a;
+  color: #f87171;
+}
