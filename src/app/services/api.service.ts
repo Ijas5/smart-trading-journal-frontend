@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ApiService {
 
-  baseUrl = 'http://localhost:8080';
+  baseUrl = 'https://smart-trading-journal-backend-production.up.railway.app';
 
   constructor(private http: HttpClient) {}
 
