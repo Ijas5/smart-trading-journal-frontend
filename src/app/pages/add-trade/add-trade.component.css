@@ -3,27 +3,36 @@
   min-height: 100vh;
   padding: 20px;
   color: white;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .form {
+  width: 100%;
   max-width: 400px;
   margin: auto;
   background: #1e293b;
   padding: 20px;
   border-radius: 10px;
+  box-sizing: border-box;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   width: 100%;
   padding: 10px;
   margin: 8px 0;
   border-radius: 6px;
   border: none;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
 textarea {
-  resize: none;
-  height: 80px;
+  resize: vertical;
+  min-height: 80px;
 }
 
 button {
@@ -33,6 +42,8 @@ button {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
 button:hover {
@@ -43,6 +54,7 @@ button:hover {
   color: #f87171;
   text-align: center;
 }
+
 .advisor {
   margin: 10px 0;
   padding: 10px;
@@ -63,4 +75,39 @@ button:hover {
 .advisor.bad {
   background: #450a0a;
   color: #f87171;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .add-trade-container {
+    padding: 15px;
+  }
+
+  .form {
+    max-width: 100%;
+    padding: 18px;
+  }
+
+  .add-trade-container h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 16px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .add-trade-container {
+    padding: 10px;
+  }
+
+  .form {
+    padding: 15px;
+  }
 }

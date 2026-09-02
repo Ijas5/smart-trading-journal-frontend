@@ -1,10 +1,12 @@
 .login-container {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #0f172a;
   color: white;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .card {
@@ -12,7 +14,9 @@
   padding: 25px;
   border-radius: 10px;
   width: 300px;
+  max-width: 100%;
   text-align: center;
+  box-sizing: border-box;
 }
 
 input {
@@ -21,6 +25,7 @@ input {
   margin: 10px 0;
   border-radius: 6px;
   border: none;
+  box-sizing: border-box;
 }
 
 button {
@@ -31,6 +36,7 @@ button {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 button:hover {
@@ -39,4 +45,24 @@ button:hover {
 
 .error {
   color: #f87171;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 15px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 380px;
+    padding: 22px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .card {
+    padding: 18px;
+  }
 }

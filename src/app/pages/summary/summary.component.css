@@ -3,6 +3,9 @@
   min-height: 100vh;
   padding: 20px;
   color: white;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .cards {
@@ -17,6 +20,7 @@
   padding: 15px;
   border-radius: 10px;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .card p {
@@ -24,10 +28,21 @@
   font-weight: bold;
 }
 
-.green { color: #22c55e; }
-.red { color: #f87171; }
-.blue { color: #38bdf8; }
-.purple { color: #c084fc; }
+.green {
+  color: #22c55e;
+}
+
+.red {
+  color: #f87171;
+}
+
+.blue {
+  color: #38bdf8;
+}
+
+.purple {
+  color: #c084fc;
+}
 
 .back {
   margin-top: 30px;
@@ -36,4 +51,72 @@
 a {
   color: #38bdf8;
   text-decoration: none;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .summary-container {
+    padding: 15px 10px;
+  }
+
+  .summary-container h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .card {
+    padding: 12px 8px;
+  }
+
+  .card h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .card p {
+    font-size: 20px;
+  }
+
+  .back {
+    text-align: center;
+    margin-top: 25px;
+  }
+}
+
+
+/* =========================
+   SMALL PHONES
+   ========================= */
+
+@media (max-width: 400px) {
+
+  .summary-container {
+    padding: 12px 8px;
+  }
+
+  .summary-container h2 {
+    font-size: 20px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card p {
+    font-size: 21px;
+  }
 }

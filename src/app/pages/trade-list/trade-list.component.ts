@@ -15,6 +15,7 @@ export class TradeListComponent implements OnInit {
   trades: any[] = [];
   userId: string | null = null;
   loading = true;
+    Math = Math;
 
   constructor(private api: ApiService, private router: Router) {}
 

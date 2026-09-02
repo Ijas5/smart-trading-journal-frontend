@@ -3,6 +3,9 @@
   background: #020617;
   min-height: 100vh;
   color: white;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 header {
@@ -32,6 +35,7 @@ button {
   padding: 15px;
   border-radius: 10px;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .card p {
@@ -39,9 +43,17 @@ button {
   font-weight: bold;
 }
 
-.green { color: #22c55e; }
-.red { color: #f87171; }
-.blue { color: #38bdf8; }
+.green {
+  color: #22c55e;
+}
+
+.red {
+  color: #f87171;
+}
+
+.blue {
+  color: #38bdf8;
+}
 
 .actions {
   margin-top: 30px;
@@ -62,4 +74,65 @@ button {
   background: #1e293b;
   padding: 20px;
   border-radius: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 15px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .card {
+    padding: 12px 8px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 20px;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .actions a {
+    padding: 10px 5px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .chart-box {
+    padding: 15px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    grid-template-columns: 1fr;
+  }
 }
